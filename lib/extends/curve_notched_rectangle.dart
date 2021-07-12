@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'dart:math' as math;
 
+/// custom float action button notched
 class CurveNotchedRectangle extends NotchedShape {
   const CurveNotchedRectangle();
 

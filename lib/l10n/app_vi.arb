@@ -1,4 +1,8 @@
 {
+    "settings__screen": "chỉ dùng cho màn hình SETTINGS",
+    "@settings__screen": {
+      "description": "-------------------------------------------------------------------"
+    },
     "settingsAccountInformation": "Cài đặt chung",
     "settingsAccountUsers": "Cài đặt tài khoản",
     "settingsPreferences": "Sở thích",
@@ -7,7 +11,27 @@
     "settingsPrivacyPolicy": "Chính sách bảo mật",
     "settingsHelpSupport": "Hỗ trợ",
     "settingsArchive": "Mục đã lưu trữ",
-
     "appLanguage": "Tiếng Việt",
-    "helloWorld": "Xin chào!"
+
+    "welcome__screen": "chỉ dùng cho màn WELCOME",
+    "@welcome__screen": {
+      "description": "-------------------------------------------------------------------"
+    },
+    "buttonRegister": "Đăng ký",
+    "buttonLogin": "Đăng nhập",
+
+    "titleWelcome": "Welcome",
+    "titleLogin": "Đăng nhập",
+    "titleRegister": "Đăng ký",
+    "useSMAccountToRegister": "Sử dụng tài khoản mạng xã hội để đăng ký",
+
+    "common__": "__common__",
+    "@common__": {
+      "description": "-------------------------------------------------------------------"
+    },
+    "tooltipMenuHome": "Trang Chủ",
+    "tooltipMenuEvents": "Sự kiện",
+    "tooltipMenuShare": "Chia sẻ",
+    "tooltipMenuSettings'": "Cài đặt"
+
 }

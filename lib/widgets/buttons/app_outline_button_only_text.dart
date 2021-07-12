@@ -1,15 +1,17 @@
 import 'package:flutter/material.dart';
 
 class AppOutlineButtonOnlyText extends StatelessWidget {
-  final double width, height;
+  final double? width, height;
   final Color borderColor;
   final String text;
   final VoidCallback? onPressed;
+  final bool? isUppercase;
 
   const AppOutlineButtonOnlyText({
     Key? key,
-    required this.width,
-    required this.height,
+    this.width = 120.0,
+    this.height = 40.0,
+    this.isUppercase = true,
     required this.borderColor,
     required this.text,
     this.onPressed,
@@ -21,14 +23,15 @@ class AppOutlineButtonOnlyText extends StatelessWidget {
       child: SizedBox(
         width: width,
         height: height,
-        child: Expanded(
-          child: OutlinedButton(
-            onPressed: onPressed,
-            child: Text(text, style: TextStyle(color: borderColor)),
-            style: OutlinedButton.styleFrom(
-              side: BorderSide(
-                color: borderColor,
-              ),
+        child: OutlinedButton(
+          onPressed: onPressed,
+          child: Text(
+              isUppercase == true ? text.toUpperCase() : text,
+              style: TextStyle(color: borderColor)
+          ),
+          style: OutlinedButton.styleFrom(
+            side: BorderSide(
+              color: borderColor,
             ),
           ),
         ),

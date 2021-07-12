@@ -24,7 +24,7 @@ class FABIcon extends StatelessWidget {
     final color = active ? Colors.black87 : Color(navIconColor);
 
     return Container(
-      margin: EdgeInsets.only(top: 35),
+      margin: EdgeInsets.only(top: 20),
       padding: EdgeInsets.only(bottom: 10),
       decoration: BoxDecoration(
         color: background,

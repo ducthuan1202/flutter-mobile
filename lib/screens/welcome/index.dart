@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mobile/utils/empty_layout.dart';
 import 'package:mobile/utils/routes.dart';
-import 'package:mobile/widgets/buttons/app_outline_button.dart';
 import 'package:mobile/widgets/buttons/app_outline_button_only_text.dart';
 
 class WelcomeScreen extends StatelessWidget {
@@ -9,13 +8,11 @@ class WelcomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Future.delayed(Duration(seconds: 3), () => {
-      Navigator.pushNamed(context, URL_HOME)
-    });
 
     return EmptyLayout(
         appBar: AppBar(
           title: Text('Welcome'),
+          centerTitle: true,
         ),
         child: Column(
           children: [
@@ -29,20 +26,18 @@ class WelcomeScreen extends StatelessWidget {
             SizedBox(height: 30),
 
             AppOutlineButtonOnlyText(
-              width: 120.0,
-              height: 40.0,
               borderColor: Colors.blueGrey,
-              text: 'REGISTER',
-              onPressed: () => print('REGISTER'),
+              text: 'register',
+              onPressed: () => Navigator.pushNamed(context, URL_EVENTS),
+              isUppercase: true,
             ),
 
             SizedBox(height: 30),
             AppOutlineButtonOnlyText(
-              width: 120.0,
-              height: 40.0,
               borderColor: Colors.blueGrey,
               text: 'Login',
-              onPressed: () => print('login'),
+              onPressed: () => Navigator.pushNamed(context, URL_HOME),
+              isUppercase: true,
             ),
 
             SizedBox(height: 30),

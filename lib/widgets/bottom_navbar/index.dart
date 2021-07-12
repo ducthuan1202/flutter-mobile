@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:mobile/extends/curve_notched_rectangle.dart';
 import 'package:mobile/utils/constants.dart';
 import 'package:mobile/utils/routes.dart';
+import 'package:mobile/utils/translation.dart';
 import 'package:mobile/widgets/bottom_navbar/fab_icon.dart';
 
 class BottomNavBar extends StatelessWidget {
@@ -19,6 +20,7 @@ class BottomNavBar extends StatelessWidget {
         children: [
           FABIcon(
             icon: const Icon(Icons.home_outlined),
+            tooltip: Translation.text(context).tooltipMenuHome,
             onPressed: () {
               if(currentURl != URL_HOME){
                 Navigator.pushNamed(context, URL_HOME);
@@ -28,6 +30,7 @@ class BottomNavBar extends StatelessWidget {
           ),
           FABIcon(
             icon: const Icon(Icons.calendar_today_outlined),
+            tooltip: Translation.text(context).tooltipMenuEvents,
             onPressed: () {
               if(currentURl != URL_EVENTS){
                 Navigator.pushNamed(context, URL_EVENTS);
@@ -38,6 +41,7 @@ class BottomNavBar extends StatelessWidget {
           SizedBox(width: 30),
           FABIcon(
             icon: const Icon(Icons.share_outlined),
+            tooltip: Translation.text(context).tooltipMenuShare,
             onPressed: () {
               if(currentURl != URL_CONTACTS){
                 Navigator.pushNamed(context, URL_CONTACTS);
@@ -47,6 +51,7 @@ class BottomNavBar extends StatelessWidget {
           ),
           FABIcon(
             icon: const Icon(Icons.settings_outlined),
+            tooltip: Translation.text(context).tooltipMenuSettings,
             onPressed: () {
               if(currentURl != URL_SETTINGS){
                 Navigator.pushNamed(context, URL_SETTINGS);

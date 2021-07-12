@@ -1,4 +1,8 @@
 {
+    "settings__screen": "only SETTINGS screen",
+    "@settings__screen": {
+      "description": "-------------------------------------------------------------------"
+    },
     "settingsAccountInformation": "Account Information",
     "settingsAccountUsers": "Account Users",
     "settingsPreferences": "Preferences",
@@ -8,9 +12,26 @@
     "settingsHelpSupport": "Help & Support",
     "settingsArchive": "Archive",
 
-    "helloWorld": "Hello World!",
     "appLanguage": "English",
-    "@helloWorld": {
-      "description": "The conventional newborn programmer greeting"
-    }
+
+    "welcome__screen": "only WELCOME screen",
+    "@welcome__screen": {
+      "description": "-------------------------------------------------------------------"
+    },
+    "buttonRegister": "Register",
+    "buttonLogin": "Login",
+
+    "titleWelcome": "Welcome",
+    "titleLogin": "Login",
+    "titleRegister": "Register",
+    "useSMAccountToRegister": "Use SM Account to register",
+
+    "common__": "common__",
+    "@__common__": {
+      "description": "-------------------------------------------------------------------"
+    },
+    "tooltipMenuHome": "Home",
+    "tooltipMenuEvents": "Events",
+    "tooltipMenuShare": "Share",
+    "tooltipMenuSettings": "Settings"
 }

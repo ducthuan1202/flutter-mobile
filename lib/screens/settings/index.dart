@@ -4,26 +4,30 @@ import 'package:mobile/bloc/language_cubit.dart';
 import 'package:mobile/utils/main_layout.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:mobile/utils/routes.dart';
+import 'package:mobile/utils/translation.dart';
 
 class SettingsScreen extends StatelessWidget {
   const SettingsScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+
+    final String txt = Translation.text(context).tooltipMenuSettings;
+
     return MainLayout(
       appBar: AppBar(
         leading: IconButton(
           icon: Icon(Icons.arrow_back_ios),
           onPressed: () => Navigator.pushNamed(context, URL_HOME),
         ),
-        title: Text('Settings'),
+        title: Text(txt),
       ),
       child: SingleChildScrollView(
         child: ContentSettings(),
       ),
       floatButton: FloatingActionButton(
         onPressed: () {
-          print('Settings');
+          print(txt);
         },
         child: Icon(Icons.camera_alt_outlined),
       ),
