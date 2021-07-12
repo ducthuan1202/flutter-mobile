@@ -1,0 +1,16 @@
+{
+    "settingsAccountInformation": "Account Information",
+    "settingsAccountUsers": "Account Users",
+    "settingsPreferences": "Preferences",
+    "settingsPushNotifications": "Push Notifications",
+    "settingsTermsConditions": "Terms & Conditions",
+    "settingsPrivacyPolicy": "Privacy Policy",
+    "settingsHelpSupport": "Help & Support",
+    "settingsArchive": "Archive",
+
+    "helloWorld": "Hello World!",
+    "appLanguage": "English",
+    "@helloWorld": {
+      "description": "The conventional newborn programmer greeting"
+    }
+}
