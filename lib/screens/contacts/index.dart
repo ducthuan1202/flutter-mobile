@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:mobile/utils/main_layout.dart';
 import 'package:mobile/utils/routes.dart';
 import 'package:mobile/utils/translation.dart';
+import 'package:mobile/widgets/radial_menu/index.dart';
 
 class ContactsScreen extends StatelessWidget {
   const ContactsScreen({Key? key}) : super(key: key);
@@ -14,22 +15,20 @@ class ContactsScreen extends StatelessWidget {
         leading: Icon(Icons.arrow_back_ios),
         title: Text(txt),
       ),
-      child: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text(
-              txt,
-              style: Theme.of(context).textTheme.headline4,
-            ),
-            ElevatedButton(onPressed: (){
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Center(child: RadialMenu()),
+          ElevatedButton(
+            onPressed: () {
               Navigator.pushNamed(context, URL_SETTINGS);
-            }, child: Text('Go to Settings Screen'))
-          ],
-        ),
+            },
+            child: Text('Go to Settings Screen'),
+          ),
+        ],
       ),
       floatButton: FloatingActionButton(
-        onPressed: (){
+        onPressed: () {
           print(txt);
         },
         child: Icon(Icons.add),

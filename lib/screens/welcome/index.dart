@@ -26,7 +26,7 @@ class WelcomeScreen extends StatelessWidget {
             SizedBox(height: 30),
 
             AppOutlineButtonOnlyText(
-              borderColor: Colors.blueGrey,
+              color: Colors.blueGrey,
               text: 'register',
               onPressed: () => Navigator.pushNamed(context, URL_EVENTS),
               isUppercase: true,
@@ -34,7 +34,7 @@ class WelcomeScreen extends StatelessWidget {
 
             SizedBox(height: 30),
             AppOutlineButtonOnlyText(
-              borderColor: Colors.blueGrey,
+              color: Colors.blueGrey,
               text: 'Login',
               onPressed: () => Navigator.pushNamed(context, URL_HOME),
               isUppercase: true,
