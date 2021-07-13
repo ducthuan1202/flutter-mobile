@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:mobile/bloc/language_cubit.dart';
-import 'package:mobile/utils/main_layout.dart';
+import 'package:mobile/widgets/layouts/main_layout.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:mobile/utils/routes.dart';
 import 'package:mobile/utils/translation.dart';

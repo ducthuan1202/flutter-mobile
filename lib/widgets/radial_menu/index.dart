@@ -65,7 +65,7 @@ class RadialMenuState extends State {
           genMenuItem(),
           Positioned(
             child: genCircleCenter(),
-            top: 105.0,
+            top: 104.0,
             left: 150.0,
           ),
         ],
@@ -80,7 +80,7 @@ class RadialMenuState extends State {
       child: FloatingActionButton(
         onPressed: () => print('go to screen $_selected'),
         child: Text(
-          _selected.isEmpty ? 'Select item' : _selected,
+          _selected.isEmpty ? 'Select' : _selected,
           textAlign: TextAlign.center,
         ),
       ),

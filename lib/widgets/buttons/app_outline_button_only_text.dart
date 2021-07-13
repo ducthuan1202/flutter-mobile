@@ -12,7 +12,7 @@ class AppOutlineButtonOnlyText extends StatelessWidget {
     this.width = 120.0,
     this.height = 40.0,
     this.isUppercase = false,
-    required this.color,
+    this.color = Colors.blueGrey,
     required this.text,
     this.onPressed,
   }) : super(key: key);

@@ -1,4 +1,39 @@
 {
+
+    "yes": "Yes",
+    "no": "No",
+    "done": "Done",
+    "cancel": "Cancel",
+    "select": "Select",
+    "existing": "Existing",
+    "preview": "Preview",
+    "next": "Next",
+    "apply": "Apply",
+    "share": "share",
+    "download": "Download",
+    "submit": "Submit",
+    "save": "Save",
+    "create": "Create",
+    "new_word": "New",
+    "add": "Add",
+    "edit": "Edit",
+    "update": "Update",
+
+    "day": "Day",
+    "week": "Week",
+    "month": "Month",
+    "year": "Year",
+
+    "welcome": "Welcome",
+    "register": "Register",
+    "login": "Login",
+
+    "age": "Age",
+    "weight": "Weight",
+    "upcoming": "Upcoming",
+    "treatments": "Treatments",
+    "notifications": "Notifications",
+
     "settings__screen": "chỉ dùng cho màn hình SETTINGS",
     "@settings__screen": {
       "description": "-------------------------------------------------------------------"
@@ -17,8 +52,6 @@
     "@welcome__screen": {
       "description": "-------------------------------------------------------------------"
     },
-    "buttonRegister": "Đăng ký",
-    "buttonLogin": "Đăng nhập",
 
     "titleWelcome": "Welcome",
     "titleLogin": "Đăng nhập",
@@ -29,6 +62,10 @@
     "@common__": {
       "description": "-------------------------------------------------------------------"
     },
+
+    "buttonRegister": "Đăng ký",
+    "buttonLogin": "Đăng nhập",
+
     "tooltipMenuHome": "Trang Chủ",
     "tooltipMenuEvents": "Sự kiện",
     "tooltipMenuShare": "Chia sẻ",

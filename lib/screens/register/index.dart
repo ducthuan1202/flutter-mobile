@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mobile/utils/translation.dart';
 
 class RegisterScreen extends StatelessWidget {
   const RegisterScreen({Key? key}) : super(key: key);
@@ -8,7 +9,7 @@ class RegisterScreen extends StatelessWidget {
     return Center(
       child: Column(
         children: [
-          Text('register'),
+          Text(Translation.text(context).register),
         ],
       ),
     );

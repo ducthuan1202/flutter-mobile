@@ -8,8 +8,8 @@ class AppIconButtonShadow extends StatelessWidget {
 
   const AppIconButtonShadow({
     Key? key,
-    this.shadowColor = Colors.black,
-    this.color = Colors.black,
+    this.shadowColor = Colors.blueGrey,
+    this.color = Colors.blueGrey,
     this.onPressed,
     required this.icon,
   }) : super(key: key);

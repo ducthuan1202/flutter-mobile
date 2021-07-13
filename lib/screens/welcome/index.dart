@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:mobile/utils/empty_layout.dart';
+import 'package:mobile/widgets/layouts/empty_layout.dart';
 import 'package:mobile/utils/routes.dart';
+import 'package:mobile/utils/translation.dart';
 import 'package:mobile/widgets/buttons/app_outline_button_only_text.dart';
 
 class WelcomeScreen extends StatelessWidget {
@@ -11,7 +12,7 @@ class WelcomeScreen extends StatelessWidget {
 
     return EmptyLayout(
         appBar: AppBar(
-          title: Text('Welcome'),
+          title: Text(Translation.text(context).welcome),
           centerTitle: true,
         ),
         child: Column(
@@ -27,7 +28,7 @@ class WelcomeScreen extends StatelessWidget {
 
             AppOutlineButtonOnlyText(
               color: Colors.blueGrey,
-              text: 'register',
+              text: Translation.text(context).register,
               onPressed: () => Navigator.pushNamed(context, URL_EVENTS),
               isUppercase: true,
             ),
@@ -35,7 +36,7 @@ class WelcomeScreen extends StatelessWidget {
             SizedBox(height: 30),
             AppOutlineButtonOnlyText(
               color: Colors.blueGrey,
-              text: 'Login',
+              text: Translation.text(context).login,
               onPressed: () => Navigator.pushNamed(context, URL_HOME),
               isUppercase: true,
             ),
@@ -49,7 +50,7 @@ class WelcomeScreen extends StatelessWidget {
                 IconButton(onPressed: () {}, icon: Icon(Icons.facebook)),
               ],
             ),
-            Text('Use SM Account to register'),
+            Text(Translation.text(context).useSMAccountToRegister),
           ],
         ));
   }

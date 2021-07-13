@@ -4,10 +4,12 @@ import 'package:graphql_flutter/graphql_flutter.dart';
 
 class AppGraphQLProvider extends StatelessWidget {
   final Widget child;
+
   const AppGraphQLProvider({Key? key, required this.child}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+
     final String graphURl = dotenv.env['APP_GRAPHQL_ENDPOINT'].toString();
 
     WidgetsFlutterBinding.ensureInitialized();

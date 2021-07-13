@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mobile/utils/translation.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({Key? key}) : super(key: key);
@@ -8,7 +9,7 @@ class LoginScreen extends StatelessWidget {
     return Center(
       child: Column(
         children: [
-          Text('login'),
+          Text(Translation.text(context).login),
         ],
       ),
     );

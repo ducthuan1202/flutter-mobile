@@ -1,19 +1,3 @@
-# mobile
-
-```bash
-// ElevatedButton color
-primarySwatch: Colors.green,
-
-// AppBar background
-primaryColor: Colors.cyan,
-
-// float button color
-accentColor: Colors.red,
-
-// bottom app bar color
-bottomAppBarColor: Colors.grey,
-```
-
 ## Getting Started
 
 This project is a starting point for a Flutter application.

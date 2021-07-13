@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:mobile/utils/main_layout.dart';
+import 'package:mobile/widgets/layouts/main_layout.dart';
 import 'package:mobile/utils/routes.dart';
 import 'package:mobile/utils/translation.dart';
 import 'package:mobile/widgets/radial_menu/index.dart';

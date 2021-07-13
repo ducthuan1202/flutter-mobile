@@ -11,9 +11,14 @@ class AppConfig extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
+
+      initialRoute: URL_EVENTS,
+      routes: AppRoutes,
+
       locale: locale,
       localizationsDelegates: AppLocalizations.localizationsDelegates,
       supportedLocales: AppLocalizations.supportedLocales,
+
       theme: ThemeData(
         // ElevatedButton color
         primarySwatch: Colors.green,
@@ -24,8 +29,6 @@ class AppConfig extends StatelessWidget {
         // bottom app bar color
         bottomAppBarColor: Colors.grey,
       ),
-      initialRoute: URL_EVENTS,
-      routes: AppRoutes,
     );
   }
 }

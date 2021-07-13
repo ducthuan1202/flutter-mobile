@@ -16,7 +16,8 @@ class _CountriesListState extends State<CountriesList> {
         options: QueryOptions(
             document: gql(countriesQuery),
             variables: {},
-            pollInterval: Duration(seconds: 10)),
+            pollInterval: Duration(seconds: 10),
+        ),
         builder: (QueryResult result, {Refetch? refetch, FetchMore? fetchMore}) {
           // has error
           if (result.hasException) {
@@ -26,11 +27,16 @@ class _CountriesListState extends State<CountriesList> {
             );
           }
 
-          // show loadding
+          // show loading
           if (result.isLoading) {
             return SizedBox(
-              height: 40,
-              child: CircularProgressIndicator(),
+              height: 40.0,
+              width: double.infinity,
+              child: Container(
+                width: 40.0,
+                height: 40.0,
+                child: CircularProgressIndicator(),
+              ),
             );
           }
 
@@ -45,12 +51,12 @@ class _CountriesListState extends State<CountriesList> {
 
           // render list view
           return Container(
-            height: 300,
+            height: 500.0,
             child: ListView.separated(
               itemCount: data.length,
               itemBuilder: (context, index) => ListTile(
                 leading: Text(data[index]?['code'] ?? '--'),
-                title: Text(data[index]?['name']),
+                title: Text(data[index]?['name'] ?? 'n/'),
               ),
               separatorBuilder: (context, index) => Divider(),
             ),

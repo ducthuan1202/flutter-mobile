@@ -1,10 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:mobile/utils/main_layout.dart';
+import 'package:mobile/widgets/layouts/main_layout.dart';
 import 'package:mobile/utils/routes.dart';
 import 'package:mobile/utils/translation.dart';
 import 'package:mobile/widgets/buttons/app_button_only_text.dart';
+import 'package:mobile/widgets/buttons/app_icon_button.dart';
 import 'package:mobile/widgets/buttons/app_icon_button_shadow.dart';
 import 'package:mobile/widgets/buttons/app_outline_button_only_text.dart';
+import 'package:mobile/widgets/svg_icon/index.dart';
+import 'package:mobile/widgets/text/roboto_text.dart';
+import 'package:mobile/widgets/text/zenloop_text.dart';
 
 class EventsScreen extends StatelessWidget {
   const EventsScreen({Key? key}) : super(key: key);
@@ -15,10 +19,19 @@ class EventsScreen extends StatelessWidget {
 
     return MainLayout(
       appBar: AppBar(
-        leading: Icon(Icons.arrow_back_ios),
+        leading: IconButton(
+            icon: Icon(Icons.arrow_back_ios),
+            onPressed: () {
+              Navigator.pop(context);
+            }),
         title: Text(txt),
         actions: [
-          IconButton(onPressed: () => print('share'), icon: Icon(Icons.share_outlined)),
+          IconButton(
+            icon: Icon(Icons.share_outlined),
+            onPressed: () {
+              Navigator.pushNamed(context, URL_CONTACTS);
+            },
+          ),
         ],
       ),
       child: SingleChildScrollView(
@@ -29,32 +42,77 @@ class EventsScreen extends StatelessWidget {
               txt,
               style: Theme.of(context).textTheme.headline4,
             ),
-            AppOutlineButtonOnlyText(color: Colors.blue, text: 'Button'),
 
-            SizedBox(height: 10,),
-            AppButtonOnlyText(
-                backgroundColor: Colors.indigoAccent,
-                text: 'Yes - No',
-                onPressed: () {},
-            ),
-            SizedBox(height: 10,),
-
-            AppIconButtonShadow(
-              icon: Icon(Icons.camera_alt_outlined),
-              color: Colors.red,
-              onPressed: () => print('ok'),
+            ZenLoopText(
+              text: 'custom font',
+              style: TextStyle(
+                  fontSize: 33.0
+              ),
             ),
 
-            SizedBox(height: 10,),
+            Center(
+              child: Wrap(
+                direction: Axis.vertical,
+                crossAxisAlignment: WrapCrossAlignment.center,
+                children: [
+                  AppOutlineButtonOnlyText(
+                    text: Translation.text(context).create,
+                    onPressed: () {},
+                  ),
 
-            ElevatedButton(onPressed: (){
-              Navigator.pushNamed(context, URL_CONTACTS);
-            }, child: Text('Go to Contact Screen'))
+                  SizedBox(width: 10, height: 10,),
+                  AppButtonOnlyText(
+                    backgroundColor: Colors.indigoAccent,
+                    text: Translation.text(context).yes,
+                    onPressed: () {},
+                  ),
+
+                  SizedBox(width: 10, height: 10,),
+                  AppIconButtonShadow(
+                    icon: Icon(Icons.camera_alt_outlined),
+                    color: Colors.blueGrey,
+                    onPressed: () {},
+                  ),
+
+                  SizedBox(width: 10, height: 10,),
+                  AppIconButton(
+                    icon: Icon(Icons.share_outlined),
+                    color: Colors.blueGrey,
+                    onPressed: (){},
+                  ),
+
+                  SizedBox(width: 10, height: 10,),
+                  TextButton(onPressed: (){}, child: Text('ahihi')),
+
+                  SizedBox(width: 10, height: 10,),
+                  Chip(
+                    label: Text('Demo', style: TextStyle(color: Colors.white),),
+                    backgroundColor: Colors.blueGrey,
+                  ),
+
+                  SizedBox(width: 10, height: 10,),
+                  SvgIcon(icon: 'home', color: Colors.blue, size: 50.0,),
+
+                  SizedBox(width: 10, height: 10,),
+                  SvgIcon(icon: 'home', color: Colors.red, size: 20.0,),
+
+                  SizedBox(width: 10, height: 10,),
+                  Image(
+                    height: 50.0,
+                    width: 50.0,
+                    image: AssetImage('images/flutter_logo.jpeg'),
+                  ),
+
+                  SizedBox(width: 10, height: 10,),
+                ],
+              ),
+            )
+
           ],
         ),
       ),
       floatButton: FloatingActionButton(
-        onPressed: (){
+        onPressed: () {
           print(txt);
         },
         child: Icon(Icons.add),
